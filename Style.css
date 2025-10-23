@@ -1,0 +1,90 @@
+body {
+    /* Box Model & Layout */
+    margin: 0 0 100px 0;
+    
+    /* Tipografia */
+    font-family: "Chakra Petch", sans-serif;
+    color: white;
+    
+    /* Cores de Fundo (Mundo YouTube é escuro) */
+    background: black;
+}
+
+header {
+    /* Box Model */
+    padding: 20px;
+    border-bottom: solid 2px rgb(42, 122, 228);
+    
+    /* Tipografia & Cor */
+    font-size: 32px;
+    color: rgb(42, 122, 228);
+}
+
+.chamada {
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    
+    /* Box Model */
+    padding: 80px 0; /* Shorthand para padding-top e padding-bottom */
+    
+    /* Cores */
+    background: rgb(184, 156, 213);
+}
+
+.chamada-texto {
+    margin-right: 5%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* NOVAS REGRAS PARA IMITAR LAYOUT DE VÍDEOS (GRADE/LADO A LADO)              */
+/* -------------------------------------------------------------------------- */
+
+.categoria {
+    /* Box Model */
+    padding: 50px 20px 0 20px; /* Top Right Bottom Left. 0 na margem inferior. */
+}
+
+/* Fundo sutil para a seção de vídeos (como uma área de conteúdo cinza escuro) */
+/* Aplicado aqui para fins de demonstração, mas você pode querer envolver o .categoria em outro div. */
+.categoria h2 {
+    color: rgb(42, 122, 228);
+    margin-bottom: 20px; /* Adicionando espaço abaixo do título */
+}
+
+.categoria-videos {
+    /* Layout para colocar os itens lado a lado (Grade de Vídeos) */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os vídeos quebrem para a próxima linha se não houver espaço */
+    gap: 20px; /* Aumenta o espaçamento entre os vídeos para visualização em grade */
+    
+    /* Remove a rolagem horizontal, pois agora é uma grade que quebra a linha */
+    overflow-x: unset; 
+    
+    /* ADICIONANDO UM FUNDO SUBTIL para o contêiner de vídeos */
+    background: #181818; /* Cinza bem escuro, comum em temas escuros */
+    padding: 20px;
+    border-radius: 8px; /* Borda arredondada suave */
+}
+
+.categoria-videos img {
+    /* Reduzindo o tamanho do vídeo para caber vários lado a lado */
+    width: 280px; /* Largura típica para miniaturas de vídeo */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    
+    /* Efeitos de Hover */
+    opacity: 1.0; /* Definindo a opacidade padrão para 1.0 para manter visível */
+    
+    /* Adicionando transição para o efeito de hover mais suave */
+    transition: border 0.2s ease-in-out;
+}
+
+.categoria-videos img
